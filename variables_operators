@@ -21,6 +21,8 @@ x=5.7 #float it changed now
 print(type(x)) #<class 'int'>
 
 ***  Operators  ***
+
+
 + addition           // floor or integer division (10//3=3 just quotient)
 - subtraction        ** to the power of
 / division
@@ -30,3 +32,21 @@ print(type(x)) #<class 'int'>
 # tab completion
 # esc m to markdown
 # shift enter to new cell
+# float > integer so 6+3.2= float
+# if you don't assign your variable anywhere like you code directly like 10/3 it is assigning to _(underscore) by default
+# underscore is contains most recent variable or operator that we've created
+# we shouldn't assign anything to _ because we can't use python built in proparties properly
+# we can start with a underscore when we named the variables but nothing else
+# camelNotation
+
+***  Type Bool and Comparisons  ***
+
+# bool = True,False
+# and(binary operator it takes two),or,not(unary operator it just takes one variable)
+not(True) = False
+# only one equal sign means assignment =,two equal sign means we are checking wheter the two values are equal or not ==
+# != not equal the result is true if the two variables are different from each other
+
+!!! 3==3.0  TRUE !!!
+# because they are comparing the values by discarding the decimal points.
+# int gets implicitly converted to float in this case.
