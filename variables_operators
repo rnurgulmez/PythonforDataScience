@@ -1,0 +1,21 @@
+***  Variables and Operators  ***
+
+x=2 #int  assigning 2 to x,assigning value
+y=5 #int 
+# Python is a dynamically typed language,you don't need to specify the type of variable,whatever content you are assigning to a variable the that content decides the type.
+xy=7.2 #float
+# We need to assign the names of the variables descriptive way for readability.
+c=2+4j #complex
+s="hellow" #string 
+# Double quotes or single quotes no difference between them.
+# String is a sequance of characthers
+s="12" #string
+a,b=4,5.0 #mutliple assignment #a is a int #b is a float because of the decimal points
+# Each variable keeps a space in memory. To free this space, we delete the variables we no longer use from the memory with this command.
+del x 
+print("x") #error
+# We can see how many variable that we have rn in the memory with this command
+%whos
+x=5 #int
+x=5.7 #float it changed now
+print(type(x)) #<class 'int'>
