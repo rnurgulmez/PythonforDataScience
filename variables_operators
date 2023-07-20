@@ -1,4 +1,4 @@
-***  Variables and Operators  ***
+***  Variables  ***
 
 x=2 #int  assigning 2 to x,assigning value
 y=5 #int 
@@ -19,3 +19,14 @@ print("x") #error
 x=5 #int
 x=5.7 #float it changed now
 print(type(x)) #<class 'int'>
+
+***  Operators  ***
++ addition           // floor or integer division (10//3=3 just quotient)
+- subtraction        ** to the power of
+/ division
+% mod (27%5=2)
+* multiplication
+
+# tab completion
+# esc m to markdown
+# shift enter to new cell
