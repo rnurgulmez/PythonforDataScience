@@ -50,3 +50,44 @@ not(True) = False
 !!! 3==3.0  TRUE !!!
 # because they are comparing the values by discarding the decimal points.
 # int gets implicitly converted to float in this case.
+
+***  Some Useful Functions  ***
+
+# Functions are sometimes,particularly a built in function is basically a feature form the language that is supplied for users to achieve particular task.
+
+* Round Function *
+
+# Round functios finds the nearest integer
+# round(4.6)=5  round is a Function 4.6 is a "argument"
+# round(4.3)=4  round is a Function 4.3 is a "argument"
+# round(4.55842,3) 4.558 the result will be there decimal places
+
+* Divmod Function *
+
+  divmod(x,y)  = (quotient,reminder)
+# divmod(27,5) = (5,2) if we have 2 or more elements we call these "tuples" ordered list
+# divmod = (//,%) is the same thing
+
+* isinstance Function *
+
+# Returns True if the first argument is an instance of that class. Multiple classes can also be checked at once. 
+# print(isinstance(1,int))   True
+# print(isinstance(1.0,int)) False
+# print(isinstance(1.0,(int,float))) if it is one of these returns True
+
+* Power Function *
+
+# pow(x,y,z) = x raise to the power y and remainder by z (x**y)%z
+# pow(2,4,7) = 2 -> 2**4=16%7=2
+
+* Input Function *
+
+# a= input("Enter something") whatever the user enter here it is string even if 34 it is also string we will convert afterwards.
+x=input("enter a number : ")
+type(x) -> str
+x = int(x) 
+type(x) -> int we converted str to int
+
+a = float(input("Enter a real number : "))
+
+# pow?,pow??,help(pow),help(input) we can check like this how can we use one function
