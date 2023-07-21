@@ -153,3 +153,45 @@ if x>10:
 """
 multi line comment
 """
+
+User will enter a floating number let say 238.915. Your task is to find 
+out the integer portion before the point (in this case 238)
+and then check if that integer portion is an even number or not.
+
+x = float(input("Enter a floating number : "))
+y = round(x)
+if x>0:
+    if y>x:
+        intPortion = y-1
+    else:
+        intPortion = y
+else:
+    if y>x: 
+        intPortion = y
+    else:
+        intPortion = y+1
+
+!! if :
+   else :
+     pass (=do nothing)
+
+if intPortion%2 == 0:
+    print("even")
+else:
+    print("odd")
+
+***  Loops  ***
+n = int(input("How many times should I repeat? :"))
+i=1
+while i<n:
+    print(i)
+    i+=1
+print("done")
+
+* Break Continue *
+
+# A break statement wherever written inside the body of the loop tells that exit the loop immediately 
+# whenver this break encountered,it exits the loop and brings you outside of the loop.
+
+# Continue basically skips the remaining body of the loop and starts another iteration.
+
