@@ -128,3 +128,28 @@ elif (a>=70) and (a<75):
     print("B- grade")
 else:
     print("Below Avarage")
+
+-------Fun Part-------------
+
+a = 3
+if a>10:
+    print(">10")
+elif not(a>10):
+    print("else part")
+
+* Nested If *
+
+x = int(input("Enter a number : "))
+if x>10:
+    print("your number is greater than ten, ")
+    if x>20:
+        print("and also above 20!")
+    else:
+        print("but not above 20.")
+
+!! indentation defines if else blocks
+
+#single line comment
+"""
+multi line comment
+"""
