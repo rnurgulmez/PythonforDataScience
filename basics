@@ -252,3 +252,50 @@ for j in range(len(L)):
     L[j] = m
     L[idx] = tmp
 print(L)
+
+***  Function  ***
+
+# Function contain all the tasks that you need the perform,
+# whenever you need to perform just call function and whole task that is under this function will be working.
+def printSuccess():
+    print("The task was successful")
+    print("Moving to the next task")
+    print("Send me the next task")
+
+printSuccess()
+
+# doc string : documentation for your function
+def printSuccess2():
+    """
+    This function is doing nothing except printing a message. This message is "hellow"
+    """
+    print("Hellow")
+
+printSuccess2?  -> we can check doc string like this
+printSuccess2?? -> whole implementation coming in front of us
+
+# write a doc string everytime you write a code.
+# there is a lot of function is coming from C because of their efficiency
+help(printSuccess2)
+
+* Functions(input arguments) *
+
+def printMessage(msg):
+    print(msg)
+# call
+printMessage("rabia")
+
+----------------------
+def printMsg(msg):
+    """
+    The function prints the message supplied by the user or prints that msg is not in the form of string.
+    """
+    if isinstance(msg,str):
+        print(msg)
+    else:
+        print("Your input argument is not a string")
+        print("Here is the type what you have supplied : ",type(msg))
+
+# we can call like these too
+y = "hellow"
+printMsg(y)
