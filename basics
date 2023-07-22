@@ -181,6 +181,9 @@ else:
     print("odd")
 
 ***  Loops  ***
+
+* While Loop ; condition loop *
+
 n = int(input("How many times should I repeat? :"))
 i=1
 while i<n:
@@ -195,3 +198,57 @@ print("done")
 
 # Continue basically skips the remaining body of the loop and starts another iteration.
 
+* For Loop ; counter loop *
+
+L = []
+for i in range(10):
+    print(i+1)
+    L.append(i**2)
+
+# 10 is not included,9 is the last iteration
+
+L = []
+for i in range(0:10:2):  # range(0,10,2) start from 0(included) end at 9(not included) +2 +2 +2 0,2,4,6,8 -> 0,4,16,36,64
+    print(i+1)
+    L.append(i**2)
+print(L)
+
+# set {} list []
+
+S = {"apple",4.9,"cherry"}
+i = 1
+for x in S:
+    print(x)
+    i += 1
+    if i==3:
+        break
+    else:
+        pass
+else:
+    print("Loop terminates with success")
+print("Out side the loop")
+
+-----------------------------
+
+D = {"A":10,"B":-19,"C":"abc"}  # dictinorary
+for x in D:
+    print(x,D[x])
+
+"""
+Given a list of numbers [1,2,4,-5,7,9,3,2] make another list that contains all the items 
+in sorted order from min to max. Your result will be another list like [-5,1,2,2,3,7,9].
+"""
+L = [1,2,4,-5,7,9,3,2]
+for j in range(len(L)):
+    m = L[j]
+    idx = j
+    c = j
+    for i in range(j,len(L)):
+        if L[i]<m:
+            m = L[i]
+            idx = c
+        c+=1
+    tmp = L[j]
+    L[j] = m
+    L[idx] = tmp
+print(L)
