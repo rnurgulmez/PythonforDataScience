@@ -330,6 +330,8 @@ def f(c2,c1,c3):
 def add(x,y):
     c=x+y    # we can't receive this c value outside the function it will be lost when the inside the function is complete.
 
+def add(x,y):
+    return x+y # this way we can reach x+y outside the function
 ----------
 # Variables that are available before the call,they are available inside the function,but the variables inside the functions are not available outside.
 def f():
@@ -344,3 +346,34 @@ def f():
   prints(a) 
 
 # if there is no a,but you still call F then either you will get an error or this might be a global variable or defined in some package.
+# scope of variable : if we define a variable inside a function it is not accessible outside the function.
+# Otherwise if it is defined outside we can use both inside and outside.
+
+# empty functions returns none this means function always return something.
+
+------------------------------------
+
+def h():
+    print("A")
+    a=3
+    b=5
+    c=a+b
+    print("something")
+    return                  # it is exit like a break statement exiting right away
+    print("B")
+    print("C")
+
+----------------------------------
+
+def r():
+    a=5
+    b=7
+    d="something"
+    return a,b,d            # we can return more than 1 value even if they are different type
+
+* Variable Number of Input Arguments * 
+def add(*args):              # we can pass as many as we what arguments
+    sum = 0
+    for i in range(len(args)):
+        sum += args[i]
+    return sum
