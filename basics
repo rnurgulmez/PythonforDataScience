@@ -299,3 +299,48 @@ def printMsg(msg):
 # we can call like these too
 y = "hellow"
 printMsg(y)
+
+* Multiple Arguments *
+
+def mypow(a,b):
+    """This function computes power just like builtin pow function
+    """
+    c = a**b
+    print(c)
+
+-------------------
+
+def checkArgs(a,b,c):
+    if isinstance(a,(int,float)) and isinstance(b,(int,float)) and isinstance(c,(int,float)):
+        print((a+b+c)**2)
+    else:
+        print("Error: the input arguments are not of the expected types")
+
+# You have to define the number of whatever the it is expecting,you have to supply exactly as many.Otherwise,you are getting an error.
+
+* Order of Input *
+
+def f(c2,c1,c3):
+  print(c1,c2,c3)
+
+# if you gave f(2,3,4) then c2=2 c1=3 c3=4 order is important.
+# f(c1="A",c2="B",c3="C") then order is not important.
+
+* Variables Inside *
+def add(x,y):
+    c=x+y    # we can't receive this c value outside the function it will be lost when the inside the function is complete.
+
+----------
+# Variables that are available before the call,they are available inside the function,but the variables inside the functions are not available outside.
+def f():
+  prints(a)
+
+# calling this function
+a=7
+f(): -> 7
+----------
+def f():
+  a=7 (local variable) # local variable will be gone after the execution
+  prints(a) 
+
+# if there is no a,but you still call F then either you will get an error or this might be a global variable or defined in some package.
