@@ -377,3 +377,25 @@ def add(*args):              # we can pass as many as we what arguments
     for i in range(len(args)):
         sum += args[i]
     return sum
+-------------------------------
+f(c1="a") c1->key a->value key-value pairs
+-----------------------
+def f(**c):
+    for x in c:
+        print(x,c[x])
+
+# call
+f(a=1,b=2,c=3)
+* Default Values *
+
+* Default Values *
+def f(sum=0):   # 0 is assigned to sum when we run this cell,not when we call the function.
+    print(sum)
+
+# call
+f() # return 0 because it is a default value
+f(5) # return 5
+
+# We have 2 different place in memory for basic variables,but for some variable for example
+# L={1,2,3} and L2 = l then L have 2 different name L and L2 in the memory.
+
