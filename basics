@@ -399,3 +399,20 @@ f(5) # return 5
 # We have 2 different place in memory for basic variables,but for some variable for example
 # L={1,2,3} and L2 = l then L have 2 different name L and L2 in the memory.
 
+------------------------------------
+
+L = [1,2,3]
+L2 = L
+L2[0] = -9
+print(L)         # -0,2,3
+
+-----------------------------------
+def ff(L=[1,2]):              # This default L is assigning to when the function is running not when you
+    for i in L:
+        print(i)
+# call 1
+L2 = [12,3,4]
+ff(L2)                        # 12,3,4
+
+# call 2
+ff()                          # 1,2
