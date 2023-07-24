@@ -416,3 +416,14 @@ ff(L2)                        # 12,3,4
 
 # call 2
 ff()                          # 1,2
+
+
+** Modules **
+
+import sys
+sys.path.append("C:/ABC/")
+# import my_universal_functions as myFunctions     # we are importing the whole file
+from my_universal_functions import addAllNumerics  # only one function we are importing
+
+# call time
+myFunctions.addAllNumerics(2,3,45)
