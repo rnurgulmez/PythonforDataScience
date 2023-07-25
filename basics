@@ -452,3 +452,39 @@ p(s+"and"+t)
 price = 12
 s = "The price of this book"
 v = s+" is: "+str(price)     # we need to convert int to str to concatenate 
+
+---------------------------
+
+print(s,"is:",price) # Python automatically define a space between different kind of arguments
+
+---------------------------
+
+multilineString = """ this is the first line of the string,
+                      and here is the second line,
+                      and here is the third and final line """  # it prints as it is.
+
+a = """This is line 1
+this is line 2
+this is last line and this line is 3
+"""                                      # it counts even spaces and printing them.
+
+* String Cont... *
+# indexing and slicing
+
+# s which contains the string "How are you and who are you",
+# the slice s[3:8] will extract a substring starting from the character at index 3 up to, but not including, the character at index 8.
+
+# The slice s[3:8] starts from index 3 (inclusive) and goes up to index 8 (exclusive)
+
+s= "How are you and who are you"
+type(s[5])                       # str not char
+
+# s[-1] it will be give us last charachter
+
+s[-8:-3]  # ' are ' again -3 is not included we will count -1[u] -2[o] -3[y] then start -4[ ] -5[a] -6[r] -7[e] -8[ ]
+
+# Strings are immutable(once created you can't change it is contenst like s[1] = a no...)
+# Slicing more populer data structure with mutable types
+
+s[0:12:2]        # include 0,exclude 12 and step size of 2
+"How are you and who are you" Hwaeyu
