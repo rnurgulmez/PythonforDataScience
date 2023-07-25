@@ -427,3 +427,28 @@ from my_universal_functions import addAllNumerics  # only one function we are im
 
 # call time
 myFunctions.addAllNumerics(2,3,45)
+
+* Practice Function *
+
+#from my_universal_functions import checkIfNotNumeric
+def sortList(L):
+    if not(checkIfNotNumeric2(L)):
+        print("Error: List does not contain numeric values")
+        return
+    else:
+        c=0
+        for x in L:
+            m,idx = findMin(L,c)
+            L = swapValues(L,c,idx)
+            c+=1
+    return L
+
+** String **
+'python' is same as "python"
+s = "python is the best language for data science"
+t = "in this course we are going to learn python"
+p(s+"and"+t)
+
+price = 12
+s = "The price of this book"
+v = s+" is: "+str(price)     # we need to convert int to str to concatenate 
