@@ -488,3 +488,39 @@ s[-8:-3]  # ' are ' again -3 is not included we will count -1[u] -2[o] -3[y] the
 
 s[0:12:2]        # include 0,exclude 12 and step size of 2
 "How are you and who are you" Hwaeyu
+s[start:end:step] # if you don't mention start it starts from 0,if you do not mention end it stops at the end,if you don't mention step it is one by one.
+
+# Reverse
+s[::-1] # start and end index swapped and you will get 'uoy era ohw dna uoy era woH'
+
+# len of string
+print(len(s))
+
+# len of substring
+print(len(s[3:8]))
+
+* String Functions : Methods *
+
+# Methods are functions that are associated with an object and are called using the dot notation on that object.
+
+a = "    A lot OF Spaces at The      beGinning and end      "
+b = a.strip()                                                        
+print(b) 
+
+# strip() is a method used to remove leading and trailing whitespace characters (such as spaces, tabs, and newlines) from the beginning and end of a string.
+# It does not modify the original string; instead, it returns a new string with the whitespace removed.
+
+c = a.lower()
+print(c)
+
+d = a.upper()
+print(d)
+
+e = a.replace("Spaces","tabs")
+print(e)
+
+a = "abc;def;hgydeflwek;yy23"
+L = a.split(";")                         # it returns a list and we can work more on that list
+print(L)
+
+# ['abc', 'def', 'hgydeflwek', 'yy23'] 
