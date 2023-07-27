@@ -524,3 +524,22 @@ L = a.split(";")                         # it returns a list and we can work mor
 print(L)
 
 # ['abc', 'def', 'hgydeflwek', 'yy23'] 
+
+"abcdsflksdl"<"def"  # alphabetical order true
+
+"abc" in "öfdsklöfsdlgjaö"
+"rabia" not in "sakföawkrrabiaafkw" 
+"$%" < "*&"    # true
+
+print("We are learning \"string\" here.") # escape char
+print("We are learning 'string' here.")
+print("We are \n now on another line.")
+print(r"c:\name\drive") # if we wanted to print it as it is then we can use r before the "".
+
+**  Data Structures = Collection  **
+List      :  ordered,    changeable,          duplicates   #changable = mutable #duplicates means u have 1 item more than once duplicates is allowed.
+Tuple     :  ordered,    unchangable,         duplicates 
+Set       :  unordered,  addable/removable,   no duplicates
+Dictionary:  unordered,  changeable,          no duplicates
+
+# L[1], T[2], X in S(because set doesn't have order),D["key"] it will return the value
