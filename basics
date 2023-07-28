@@ -537,9 +537,55 @@ print("We are \n now on another line.")
 print(r"c:\name\drive") # if we wanted to print it as it is then we can use r before the "".
 
 **  Data Structures = Collection  **
-List      :  ordered,    changeable,          duplicates   #changable = mutable #duplicates means u have 1 item more than once duplicates is allowed.
-Tuple     :  ordered,    unchangable,         duplicates 
-Set       :  unordered,  addable/removable,   no duplicates
-Dictionary:  unordered,  changeable,          no duplicates
+List      :  ordered,    changeable,        []   duplicates   #changable = mutable #duplicates means u have 1 item more than once duplicates is allowed.
+Tuple     :  ordered,    unchangable,       ()   duplicates 
+Set       :  unordered,  addable/removable, {}   no duplicates
+Dictionary:  unordered,  changeable,        {}   no duplicates
 
 # L[1], T[2], X in S(because set doesn't have order),D["key"] it will return the value
+# L[1:3] last element not included
+# L[::-1] reversed list
+
+*  Add new items to list  *
+L = L + ["how","are","6","you"]
+L.append(6.8)
+*  Delete from list  *
+del L[3]
+
+
+*  Add new items to tuple  *
+T = (1,3,4.9,"name",3)
+T2 = ("a","b",45)
+T3 = T + T2      # actually we can't add or delete but we can add 2 different tuples to another tuple
+*  Delete from tuple  *
+del T # we can only delete whole tuple because it is immutable
+
+*  Add new items to set  *
+S.add(56)
+S.update({23,"game",1})  # if we want to insert more than 1 element than we use this method
+# But duplicate is not counting we have 1 more than once only one of them will be a part of this set
+*  Delete from set  *
+S.remove("game")
+
+*  Add new items to dictionary  *
+D["newKey"] = "newValue"
+*  Delete from dictionary  *
+del D['C']  # we remove the key value pair by only giving key
+*  Adding Two Different Dictionary Together  *
+D.update(D2) # we can't use + it is not possiable
+
+
+*  List,Set,Dictionary Copy Function is not available for Tuple  *
+L                   # [1, 3, 4.9, 3, 'how', 'are', '6', 'you', 6.8]
+L2 = L              
+L2                  # [1, 3, 4.9, 3, 'how', 'are', '6', 'you', 6.8]
+L2[2] = "four point nine"
+L2                  # [1, 3, 'four point nine', 3, 'how', 'are', '6', 'you', 6.8]
+L                   # [1, 3, 'four point nine', 3, 'how', 'are', '6', 'you', 6.8]
+# This is valid for all of these 3 data structure. When you copy one list to another it is not creating new place in memory actualy 
+# same places have 2 different name as a result it consume less space in memory. If you change 1 variable in L2 then L will also change.
+
+# But if we wanted to L stay the same then we use copy method
+L2 = L.copy() # this way when we do some changes on L2,L won't be affected.
+
+L3 = L[1:5] # it is new memory view completly new list
