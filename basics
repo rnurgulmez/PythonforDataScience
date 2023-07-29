@@ -589,3 +589,60 @@ L                   # [1, 3, 'four point nine', 3, 'how', 'are', '6', 'you', 6.8
 L2 = L.copy() # this way when we do some changes on L2,L won't be affected.
 
 L3 = L[1:5] # it is new memory view completly new list
+
+L.append  -> append(object, /) method of builtins.list instance
+    Append object to the end of the list.
+
+L.clear  -> Remove all items from list.
+
+D2 = {'A':L,'B':T,'C':S,'D':D} # We can have List,set,tuple or dictionary as a value
+D2['A'][3] # this is how to reach third element of List
+
+L3 = [L,T,D,"game",23]
+type(L3[2]) -> dict
+
+L3 = [x**2 for x in range(10)]   # start from 0 0**2 0 in range(10) 10 is exclusive loops till reach 9
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+S3 = {x**2 for x in range(2,20,3)}
+{4, 25, 64, 121, 196, 289}
+
+** Problem **
+"""
+Let say you are a teacher and you have different student records containing id of a student 
+and the marks in each subject where different students have taken different number of subjects.
+All these records are in hard copy.You want to enter all the data in computer and want to compute 
+the average marks of each student and display.
+"""
+def getDataFromUser():
+    D = {}
+    while True:
+        studentId = input("Enter student ID : ")
+        marksList = input("Enter the marks by comma separted values : ")
+        moreStudents = input('Enter "no" to quit insertion : ')
+        if studentId in D:
+            print(studentId,"is already insterted.")
+        else:
+            D[studentId] = marksList.split(",")
+        if moreStudents.lower() == "no":
+            return D
+
+-------------------------
+# call 
+studentData = getDataFromUser()
+-------------------------
+def getAvgMarks(D):
+    avgMarks = {}
+    for x in D:
+        L = D[x]
+        s = 0
+        for marks in L:
+            s += int(marks)
+        avgMarks[x] = s/len(L)
+    return avgMarks
+------------------------
+# call
+avgM = getAvgMarks(studentData)
+------------------------
+for x in avgM:
+    print("Student :",x,"got avg Marks as: ",avgM[x])
