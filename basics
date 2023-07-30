@@ -656,9 +656,12 @@ for x in avgM:
 import numpy as np # it is common to use numpy as a np
 a = np.array([1,2,3,5,7],dtype='i') # we can define as a list
 b = np.array((2,3,5),dtype='f') # also as a tuple
-type(a) -> numpy.ndarray
-type(b) -> numpy.ndarray
+type(a) -> numpy.ndarray # ndarray = n dimensional array
+type(b) -> numpy.ndarray # this way we can learn type of the whole array
 
-a.dtype int32
+a.dtype int32 # this way we are learning data type inside the array
 b.dtype float32
+--------------------------
+a = np.array([[1,2,3],[4,5,6]])
+a.ndim # 2d array
 
