@@ -646,3 +646,19 @@ avgM = getAvgMarks(studentData)
 ------------------------
 for x in avgM:
     print("Student :",x,"got avg Marks as: ",avgM[x])
+
+**  Numpy  **
+
+# NumPy arrays are fixed-size multidimensional arrays[list] containing homogeneous data types.
+# NumPy offers a fast and efficient structure optimized for mathematical and scientific calculations,
+# while Python lists are flexible and dynamic with a wider range of data types.
+
+import numpy as np # it is common to use numpy as a np
+a = np.array([1,2,3,5,7],dtype='i') # we can define as a list
+b = np.array((2,3,5),dtype='f') # also as a tuple
+type(a) -> numpy.ndarray
+type(b) -> numpy.ndarray
+
+a.dtype int32
+b.dtype float32
+
