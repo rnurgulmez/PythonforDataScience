@@ -714,3 +714,34 @@ np.random.permutation:
 *  np.random.randint  *
 # create some random integer between 20 and 30
 np.random.randint(20,30)
+
+a = np.random.rand(1000) # it creates array between 0-1 it is like uniform
+---------------------------
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Let's generate 1000 random data points
+data = np.random.randn(1000)
+
+# Let's plot the histogram and use 50 bins
+plt.hist(data, bins=50)
+plt.show(
+--------------------------
+c = np.random.rand(2,3) # it will create 2 dimensional array and its dimension will be consist of 2 and 3 data,respectively
+-------------------------
+c = np.random.rand(2,3,4,2) 
+# The expression (2, 3, 4, 2) specifies the dimensions of the array to be created. 
+# It indicates that a four-dimensional array will be formed, and its dimensions will be 2, 3, 4, and 2, respectively.
+
+# In this context:
+
+#  First dimension(4d): 2 elements
+#  Second dimension(3d): 3 elements
+#  Third dimension(2d): 4 elements
+#  Fourth dimension(1d): 2 elements
+# So, the resulting array will have a total of 2 * 3 * 4 * 2 = 48 elements distributed in a four-dimensional structure.
+# Each element in the array will be filled with random numbers generated from the np.random.rand() function.
+---------------------------
+d = np.arange(100).reshape(4,25) # 2 dimensional array with 4 rows and 25 columns
+
+*  Numpy Slicing  *
