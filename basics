@@ -663,5 +663,54 @@ a.dtype int32 # this way we are learning data type inside the array
 b.dtype float32
 --------------------------
 a = np.array([[1,2,3],[4,5,6]])
-a.ndim # 2d array
+a.ndim # what are the dimensions of the array 2-dimension
+--------------------------
+a = np.array([[1,2,3],[4,5,6]])  # we need 2 indisis to get a one data for example a[0,2]=3 this means this array 2d
+-------------------------
+# array of 2d arrays is 3d array
+c = np.array([[[1,2,3],[4,5,6],[0,0,-1]],[[-1,-2,-3],[-4,-5,-6],[0,0,1]]])
+c.ndim # 3d
+c[1,0,2] # -3
 
+
+*  Shape  *
+
+my_array = np.array([[1, 2, 3], [4, 5, 6]])
+
+array_shape = my_array.shape
+
+# Let's get how many elements are in the first dimension of the array
+first_dimension = array_shape[0]
+
+print(array_shape)      # (2, 3)
+print(first_dimension)  # 2
+
+-----------------
+A = np.array([2]) #1d
+B = np.array(3) #0d if we concatenate too many 0d we get 1d,if we do with 1ds we get 2d and so on...
+----------------
+np.zeros
+np.ones
+np.arange # it creates an 1d ARRAY(not a iterator) 0 to 99 if we say np.arange(100)
+A = np.arange(20,100) 
+A = np.arange(20,100,3) # for i in range(20,100,3)
+
+# Iterator : In Python, the for loop, used to iterate over data structures like lists, tuples, strings, and sets, internally uses an iterator. 
+# The for loop automatically uses the iterator to access each element of the data structure in sequence.
+print(range(10)) # this is giving us only a iterator not a actual list that way we can save memory while using loops
+print(list(range(10))) # if we really want to get a actual list then we need to use this method
+
+*  np.random.permutaion *
+
+np.random.permutation:
+
+# numpy is a Python package. It contains various modules and sub-packages.
+# random is a sub-package under numpy, and it includes functions related to generating random numbers and data.
+# permutation is a function within the numpy.random sub-package. It creates a new array by shuffling the elements of the input array randomly.
+# In summary, numpy.random.permutation is a function provided by the NumPy package that allows you 
+# to shuffle the elements of an array randomly, creating a new array with the shuffled elements. 
+# The function is part of the random sub-package within the larger NumPy package, which specializes in generating random data and numbers.
+
+*  np.random.randint  *
+# create some random integer between 20 and 30
+np.random.randint(20,30)
