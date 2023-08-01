@@ -745,3 +745,34 @@ c = np.random.rand(2,3,4,2)
 d = np.arange(100).reshape(4,25) # 2 dimensional array with 4 rows and 25 columns
 
 *  Numpy Slicing  *
+
+b = a[1:5] 
+# When performing a slicing operation in NumPy, the sliced data is considered as a "view" of the original array.
+# Therefore, the resulting sub-array obtained from slicing reflects the original array, and they both operate on the same data.
+# (but in python slicing b is copy of a so it is not affected by changes in a)
+----------------------------------------------
+## Numpy Slicing 
+a = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+# Slicing a sub-array from the 1st index to the 5th index of 'a'
+b = a[1:5]
+
+# If we modify the original array 'a', the sub-array 'b' will also be affected
+a[3] = 999
+
+print(a)  # Output: [  1   2   3 999   5   6   7   8   9]
+print(b)  # Output: [  2   3 999   5]
+-----------------------------------------------
+## Python Slicing
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+b = a[1:5]
+
+
+a[3] = 999
+
+print(a)  # Çıktı: [1, 2, 3, 999, 5, 6, 7, 8, 9]
+print(b)  # Çıktı: [2, 3, 4, 5]
+--------------------------------------------
+
