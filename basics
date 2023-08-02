@@ -772,7 +772,16 @@ b = a[1:5]
 
 a[3] = 999
 
-print(a)  # Çıktı: [1, 2, 3, 999, 5, 6, 7, 8, 9]
-print(b)  # Çıktı: [2, 3, 4, 5]
+print(a)  # [1, 2, 3, 999, 5, 6, 7, 8, 9]
+print(b)  # [2, 3, 4, 5]
 --------------------------------------------
+# numpy array is mutable we can change context
+# we can slicing without affect orginal array b = a[3:10].copy() like this then a stays the same.
+--------------------------------------------
+*  How to find out index of particular element in a numpy array?  *
+indicies = np.where(a == -1200)
+print(indicies)
 
+or
+
+idx = np.argwhere(a == -1200)[0][0]
