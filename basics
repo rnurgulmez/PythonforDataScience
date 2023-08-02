@@ -785,3 +785,63 @@ print(indicies)
 or
 
 idx = np.argwhere(a == -1200)[0][0]
+
+"""
+np.argwhere(a == -1200)[0] extracts the first element from the output of the np.argwhere() function. Thus, we obtain the array [1].
+Finally, np.argwhere(a == -1200)[0][0] allows us to obtain the first element of the array [1]. 
+This gives us the index 1, which is the index of the first occurrence of -1200.
+"""
+idx -> 3
+a[idx]=3 # we changed that index
+----------------------------------------
+a = np.round(10*np.random.rand(5,4))
+array([[ 5.,  3.,  8.,  9.],
+       [ 7.,  5.,  4.,  8.],
+       [ 0., 10.,  3.,  8.],
+       [ 4.,  4.,  7.,  3.],
+       [10., 10.,  9.,  1.]])
+a[1,2] # 4 
+a[1,:] # array([7., 5., 4., 8.])
+a[:,1] # array([ 3.,  5., 10.,  4., 10.])
+a[1:3,2:4] # array([[4., 8.],
+                    [3., 8.]])
+a.T
+array([[ 5.,  7.,  0.,  4., 10.],
+       [ 3.,  5., 10.,  4., 10.],
+       [ 8.,  4.,  3.,  7.,  9.],
+       [ 9.,  8.,  8.,  3.,  1.]])
+------------------------------------
+import numpy.linalg as la
+-----------------------------------
+a.sort(axis=0)
+array([[ 0.,  3.,  3.,  1.],
+       [ 4.,  4.,  4.,  3.],
+       [ 5.,  5.,  7.,  8.],
+       [ 7., 10.,  8.,  8.],
+       [10., 10.,  9.,  9.]])
+a.sort(axis=1)
+array([[ 0.,  1.,  3.,  3.],
+       [ 3.,  4.,  4.,  4.],
+       [ 5.,  5.,  7.,  8.],
+       [ 7.,  8.,  8., 10.],
+       [ 9.,  9., 10., 10.]])
+*  Numpy (More Indexing)  *
+this topic is whole copy not like view like slicing(Masking is copy not affect original array if we do any changes on it slicing is view of original array)
+a[index_array]
+a[[1,4,6]] # index 1,4,6 elements
+------------------------------------
+* Boolen Mask *
+import numpy as np
+
+a = np.array([10, 20, 30, 40, 50])
+
+# Creating an index array with Boolean values
+index_array = [True, True, False, False, True]
+
+# Using the index array to select elements
+result_array = a[index_array]
+
+print(result_array) -> pick true and don't pick false 10,20,50
+------------------------------------
+a[a<8]
+*  Difference  Between and and & *
