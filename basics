@@ -845,3 +845,5 @@ print(result_array) -> pick true and don't pick false 10,20,50
 ------------------------------------
 a[a<8]
 *  Difference  Between and and & *
+&   (bitwise AND operator) : this and used in arrays
+and (logical AND operator) : used when the both sides are single objects
