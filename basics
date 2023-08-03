@@ -847,3 +847,48 @@ a[a<8]
 *  Difference  Between and and & *
 &   (bitwise AND operator) : this and used in arrays
 and (logical AND operator) : used when the both sides are single objects
+----------------------------------
+
+array1 = np.array([True, False, True, False])
+array2 = np.array([False, True, False, True])
+
+result = array1 & array2
+--------------------------------
+condition1 = True
+condition2 = False
+
+result = condition1 and condition2
+print(result)  # Output: False
+
+* Numpy(Broadcasting) *
+A = A + 5
+# size matters
+A + (np.arange(2).reshape(2,1))
+
+-- Universal Function (axis=0) --
+* np.hstack *
+horizantal 
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+result = np.hstack((a, b))
+print(result)  # Output: [1 2 3 4 5 6]
+
+* np.vstack *
+vertical
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+result = np.vstack((a, b))
+print(result)
+# Output:
+# [[1 2 3]
+#  [4 5 6]]
+
+* np.sort *
+arr = np.array([3, 1, 6, 2, 5, 4])
+
+result = np.sort(arr)
+print(result)  # Output: [1 2 3 4 5 6]
