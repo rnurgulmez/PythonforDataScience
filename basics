@@ -894,4 +894,20 @@ result = np.sort(arr)
 print(result)  # Output: [1 2 3 4 5 6]
 
 ** Numpy Speed:ufuncs **
+B = np.random.rand(1000000)
+%timeit sum(B)
+%timeit np.sum(B) # B.sum() is the almost same thing
 
+**  Pandas  **
+import pandas as pd
+A = pd.Series([2,3,4,5],index=["a","b","c","d"])
+type(A.values) # numpy.ndarray
+type(A) # pandas.core.series.Series
+A.index
+A['a'] # 2 (like key-value pairs)
+A['a':'c'] # if we use slicing like that like 'a' instead of 1:3 then 'c'(the last value that we wanted) is also included.
+-------------------------------------------------
+grades_dict = {'A':4,'A-':3.5,'B':3,'B-':2.5,'C':2}
+grades = pd.Series(grades_dict) 
+# this code snippet aims to create a Pandas Series that associates 
+# numerical grade values with letter grades. Such Series are useful for providing a labeled and indexed way to access data.
