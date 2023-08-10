@@ -945,3 +945,10 @@ A = pd.DataFrame([{'a':1,'b':4},{'b':-3,'c':9}])
 1	   NaN	 -3	    9.0
 
 A.fillna(0) # wherever you see na fill with 0
+-------------------------------------------------
+*  Pandas (Indexing)  *
+data = pd.Series(['a','b','c'],index=[1,3,5])
+data[1]     # explicit index, use loc instead     a
+data[1:3]   # implicit index, use iloc instead    b,c
+------------------------------------------------
+D.iloc[::-1,:] # selects all rows in reverse order and all columns from the DataFrame D. This effectively flips the order of the rows in the DataFrame.
