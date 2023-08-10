@@ -952,3 +952,34 @@ data[1]     # explicit index, use loc instead     a
 data[1:3]   # implicit index, use iloc instead    b,c
 ------------------------------------------------
 D.iloc[::-1,:] # selects all rows in reverse order and all columns from the DataFrame D. This effectively flips the order of the rows in the DataFrame.
+------------------------------------------------
+from sklearn.impute import SimpleImputer
+import numpy as np
+
+# Eksik verileri içeren bir örnek veri seti oluştur
+data = np.array([[1, 2, np.nan],
+                 [4, np.nan, 6],
+                 [7, 8, 9]])
+
+# SimpleImputer sınıfından bir örnek oluştur
+imputer = SimpleImputer(strategy='mean')
+
+# İmputer'ı veri üzerine uygula
+imputed_data = imputer.fit_transform(data)
+
+print(imputed_data)
+-----------------------------------------------
+from sklearn.impute import SimpleImputer
+df = pd.read_csv('C:/Users/rabia/Downloads/archive/worldometer_data.csv')
+df.head()  # showing first 5 record if we say df.head(10) first 10 record
+df.drop(['NewRecovered','Population'],axis=1,inplace=True)  # removing heads
+"""
+axis=1:       This parameter indicates that you are dropping columns. axis=0 would indicate dropping rows.
+inplace=True: This parameter specifies that the changes should be applied directly to the original DataFrame without creating a new DataFrame. 
+If inplace=False, then a new DataFrame with the specified columns removed would be returned.
+"""
+df.rename(columns={'NewCases':'UpdatedCases','Country/Region':'Country','TotalRecovered':'Recovered'},inplace=True) # changing headings
+df['Date'] = pd.to_datetime(df['Date']) # if we have dates with a different format other than pandas date format then we can change it to pd.to_datetime
+df.fillna('NA') # we are filling missing values with NA
+df.info() # if we call info now we can see there is no more null in this csv file
+df.describe() # we can see count,mean vs.
