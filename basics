@@ -934,3 +934,14 @@ D.values # array([[85. ,  4. ],
                   [55. ,  nan]])
 D.values[2,0] # 75
 D['ScaledMarks'] = 100*(D['Marks']/90) # inserting column
+---------------------------------------------------
+G = D[D['Marks']>70] #masking
+
+*  Pandas(NaN)  *
+A = pd.DataFrame([{'a':1,'b':4},{'b':-3,'c':9}])
+
+      a	    b	     c
+0	   1.0	  4	    NaN
+1	   NaN	 -3	    9.0
+
+A.fillna(0) # wherever you see na fill with 0
