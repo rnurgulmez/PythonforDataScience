@@ -983,3 +983,24 @@ df['Date'] = pd.to_datetime(df['Date']) # if we have dates with a different form
 df.fillna('NA') # we are filling missing values with NA
 df.info() # if we call info now we can see there is no more null in this csv file
 df.describe() # we can see count,mean vs.
+---------------------------------------------
+df2 = df.groupby('Country')[['Country','TotalCases','Recovered','Deaths','ActiveCases']].sum().reset_index()
+df2 = df.groupby(['Country','Date'])[['Country','Date','TotalCases','Recovered','Deaths/1M pop','ActiveCases']].sum(numeric_only=True).reset_index()
+df3 = df2[df2['Confirmed']>100]
+
+**  Matplotlib  **
+import matplotlib.pyplot as plt  == from matplotlib import pyplot as plt
+x = np.linspace(0,10,1000)
+y = np.sin(x)
+plt.plot(x,y)
+---------------------------------------------
+plt.scatter(x[::10],y[::10])
+---------------------------------------------
+plt.plot(x,y,color='blue')
+plt.plot(x,np.cos(x),color='g')
+---------------------------------------------
+plt.plot(x,x+0,'-g')  # solid green
+plt.plot(x,x+1,'--c') # dashed cyan
+plt.plot(x,x+2,'-.k') # dashdot black
+plt.plot(x,x+3,':r')  # dotted red
+
