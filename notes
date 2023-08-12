@@ -1003,4 +1003,38 @@ plt.plot(x,x+0,'-g')  # solid green
 plt.plot(x,x+1,'--c') # dashed cyan
 plt.plot(x,x+2,'-.k') # dashdot black
 plt.plot(x,x+3,':r')  # dotted red
+--------------------------------------------
+# how many unique country?
+countries = df2['Country'].unique()
+len(countries)
+--------------------------------------------
+# what is recovered or death trends as the date moves on
+for idx in range(0,len(countries)):
+    C = df3[df3['Country'] == countries[idx]].reset_index()
+    plt.scatter(np.arange(0,len(C)),C['Confirmed'],color='blue',label='Confirmed')
+    plt.scatter(np.arange(0,len(C)),C['Recovered'],color='green',label='Recovered')
+    plt.scatter(np.arange(0,len(C)),C['Deaths'],color='red',label='Deaths')
+    plt.title(countries[idx])
+    plt.xlabel('Days since the first suspect')
+    plt.ylabel('Number of cases')
+    plt.legend()
+    plt.show()
+-----------------------------------------
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Global data
+world_data = df3.groupby('Date')[['Confirmed', 'Recovered', 'Deaths']].sum().reset_index()
+
+plt.plot(world_data['Date'], world_data['Confirmed'], color='blue', label='Confirmed')
+plt.plot(world_data['Date'], world_data['Recovered'], color='green', label='Recovered')
+plt.plot(world_data['Date'], world_data['Deaths'], color='red', label='Deaths')
+plt.title('Global COVID-19 Trends')
+plt.xlabel('Date')
+plt.ylabel('Number of Cases')
+plt.legend()
+plt.grid()
+plt.xticks(rotation=45)  # Rotate date labels for better readability
+plt.tight_layout()  # Adjust graph layout
+plt.show()
 
